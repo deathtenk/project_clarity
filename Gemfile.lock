@@ -165,6 +165,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  capybara
   coffee-rails (~> 4.0.0)
   cucumber-rails
   database_cleaner

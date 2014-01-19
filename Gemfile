@@ -31,10 +31,13 @@ gem 'jbuilder', '~> 1.2'
 gem 'faker'
 gem 'factory_girl_rails'
 
-# cucumber for features
+
+# testing
 group :test do
+  # cucumber for features
   gem 'cucumber-rails', :require => false
   gem 'database_cleaner'
+  gem 'capybara'
 end
 
 # respec for testing
