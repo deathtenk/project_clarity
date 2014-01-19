@@ -43,6 +43,7 @@ end
 # respec for testing
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0.beta'
+  gem 'pry-rails'
 end
 
 group :doc do
@@ -61,3 +62,5 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+
