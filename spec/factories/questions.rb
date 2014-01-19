@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :question do
-    text "MyString"
-    survey nil
+    text { Faker::Lorem.sentence.chop + "?" }
+    survey
   end
 end
