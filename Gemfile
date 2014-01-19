@@ -31,6 +31,13 @@ gem 'jbuilder', '~> 1.2'
 gem 'faker'
 gem 'factory_girl_rails'
 
+# cucumber for features
+group :test do
+  gem 'cucumber-rails', :require => false
+  gem 'database_cleaner'
+end
+
+# respec for testing
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0.beta'
 end
