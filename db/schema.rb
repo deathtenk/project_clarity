@@ -31,8 +31,6 @@ ActiveRecord::Schema.define(version: 20140119055427) do
 
   create_table "surveys", force: true do |t|
     t.string   "name"
-    t.integer  "respondent_age"
-    t.string   "respondent_gender"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
