@@ -1,0 +1,8 @@
+<h1> Surveys </h1>
+
+<% @surveys.each do |survey| %>
+<h2> <%= survey.name %></h2>
+<p> <%= survey.respondent_age %><%= survey.respondent_gender %></p>
+<hr />
+
+<% end %>

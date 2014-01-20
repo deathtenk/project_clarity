@@ -1,6 +1,6 @@
 ProjectClarity::Application.routes.draw do
+  
   resources :surveys
-
   resources :people
 
   root "greetings#hello"
