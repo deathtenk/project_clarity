@@ -3,7 +3,5 @@
 FactoryGirl.define do
   factory :survey do
     name { Faker::Lorem.sentence }
-    #respondent_age { rand 100 }
-    #respondent_gender { ["m", "f"].sample }
   end
 end
