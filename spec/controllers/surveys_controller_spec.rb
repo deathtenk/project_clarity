@@ -7,7 +7,7 @@ describe SurveysController do
   describe "GET new" do
     it "assigns a new survey as @survey" do
       get :new
-      assigns(:survey).should be_a_new(survey)
+      assigns(:survey).should be_a_new(Survey)
     end
   end
 
