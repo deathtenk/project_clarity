@@ -1,1 +1,8 @@
-FORM GOES HERE!
+<%= form_for @survey, url: {action: "create"}, html: {role: "form"} do |f| %>
+  <div class="form-group">
+    <%= f.text_field :name, class: "form-control" %> 
+  </div>
+
+
+  <%= f.submit "Create", class: "btn btn-default" %>
+<% end %>
