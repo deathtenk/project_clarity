@@ -15,6 +15,7 @@ describe "surveys/new.html.erb" do
     
     render
     
+    rendered.should have_content "Name"
     rendered.should have_selector("form input#survey_name")
     
   end

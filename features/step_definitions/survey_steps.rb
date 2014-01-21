@@ -1,7 +1,7 @@
 When(/^a user creates a new survey$/) do
   visit("/surveys/new")
   fill_in("Name", with: "Bob")
-  click_button.("Save")
+  click_button("Save")
   
 end
 
