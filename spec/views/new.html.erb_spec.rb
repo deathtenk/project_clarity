@@ -5,6 +5,7 @@ describe "surveys/new.html.erb" do
     
     render
 
+    rendered.should have_content("New Survey")
     rendered.should have_selector("form.new-survey")
   end
   
