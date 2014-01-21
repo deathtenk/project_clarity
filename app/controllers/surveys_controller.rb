@@ -4,10 +4,10 @@ class SurveysController < ApplicationController
   end
 
   def show
-
   end
 
   def new
+    @survey = Survey.new
   end
 
   def create
