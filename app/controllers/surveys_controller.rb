@@ -22,9 +22,17 @@ class SurveysController < ApplicationController
   end
 
   def edit
+    @survey = Survey.find(params[:id])
   end
 
   def update
+    @survey = Survey.find(params[:id])
+
+    if @survey.update_attributes(survey_params)
+      redirect_to @survey, :notice => "your post has been updated"
+    else
+      render "edit", :notice => "there was a problem"
+    end
   end
 
   def destroy

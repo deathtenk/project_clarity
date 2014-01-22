@@ -1,0 +1,9 @@
+<%= form_for @survey, url: {action: "update"}, html: {role: "updateform"} do |f| %>
+  <div class="form-group">
+    <%= f.label :name %> 
+    <%= f.text_field :name, class: "form-control" %> 
+  </div>
+
+
+  <%= f.submit "Update", class: "btn btn-default" %>
+<% end %>

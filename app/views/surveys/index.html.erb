@@ -2,6 +2,7 @@
 
 <% @surveys.each do |survey| %>
 <h2> <%= survey.name %> </h2>
+<p> <%= link_to "edit", edit_survey_path(survey) %> </p>
 <p3> Date Created: <%= survey.created_at %> Date Updated: <%= survey.updated_at %> </p3>
 
 <hr />
