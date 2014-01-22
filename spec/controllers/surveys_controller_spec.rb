@@ -48,4 +48,12 @@ describe SurveysController do
     end
   end
 
+  describe "GET show" do
+    it "assigns the requested survey as @survey" do
+      survey = FactoryGirl.create(:survey)
+      get :show, {:id => survey.to_param}
+      assigns(:survey).should eq(survey)
+    end
+  end
+
 end
