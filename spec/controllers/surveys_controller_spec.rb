@@ -56,4 +56,48 @@ describe SurveysController do
     end
   end
 
+  describe "PUT update" do
+    describe "with valid params" do
+      it "updates the requested survey" do
+        survey = Survey.create! valid_attributes
+        # Assuming there are no other surveys in the database, this
+        # specifies that the Survey created on the previous line
+        # receives the :update_attributes message with whatever params are
+        # submitted in the request.
+        Survey.any_instance.should_receive(:update_attributes).with(valid_attributes)
+        put :update, {:id => survey.to_param, :survey => valid_attributes}
+      end
+
+      it "assigns the requested survey as @survey" do
+        survey = Survey.create! valid_attributes
+        put :update, {:id => survey.to_param, :survey => valid_attributes}
+        assigns(:survey).should eq(survey)
+      end
+
+      it "redirects to the survey" do
+        survey = Survey.create! valid_attributes
+        put :update, {:id => survey.to_param, :survey => valid_attributes}
+        response.should redirect_to(survey)
+      end
+    end
+
+    describe "with invalid params" do
+      it "assigns the survey as @survey" do
+        survey = Survey.create! valid_attributes
+        # Trigger the behavior that occurs when invalid params are submitted
+        Survey.any_instance.stub(:save).and_return(false)
+        put :update, {:id => survey.to_param, :survey => valid_attributes}
+        assigns(:survey).should eq(survey)
+      end
+
+      it "redirects to the edit action" do
+        survey = Survey.create! valid_attributes
+        # Trigger the behavior that occurs when invalid params are submitted
+        Survey.any_instance.stub(:save).and_return(false)
+        put :update, {:id => survey.to_param, :survey => valid_attributes}
+        response.should redirect_to(edit_survey_path(survey))
+      end
+    end
+  end
+
 end
