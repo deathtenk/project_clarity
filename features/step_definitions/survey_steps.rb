@@ -1,7 +1,7 @@
 When(/^a user creates a new survey$/) do
   visit("/surveys/new")
   fill_in("Name", with: "Bob")
-  click_button("Save")
+  click_button("Create Survey")
 
 end
 
@@ -23,7 +23,7 @@ When(/^a user edits the survey$/) do
   visit("/surveys/1/edit")
 
   fill_in("Name", with: "Bob")
-  click_button("Save")
+  click_button("Update Survey")
 end
 
 Then (/^they see their changes$/) do

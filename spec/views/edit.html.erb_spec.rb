@@ -1,8 +1,8 @@
 require "spec_helper"
 
-describe "surveys/new.html.erb" do
+describe "surveys/edit.html.erb" do
   it "displays a form for a new survey" do
-    assign(:survey, Survey.new)
+    assign(:survey, FactoryGirl.build(:survey))
 
     render
 
@@ -10,7 +10,7 @@ describe "surveys/new.html.erb" do
   end
 
   it "has a field for the survey name" do
-    assign(:survey, Survey.new)
+    assign(:survey, FactoryGirl.build(:survey))
 
 
     render
@@ -20,12 +20,12 @@ describe "surveys/new.html.erb" do
 
   end
 
-  it "has a create survey button" do
-    assign(:survey, Survey.new)
+  it "has a update survey button" do
+    assign(:survey, FactoryGirl.build(:survey))
 
     render
 
-    rendered.should have_button("Create Survey")
+    rendered.should have_selector("input.btn[value=\"Update\ Survey\"]", text: "")
   end
 
 end
